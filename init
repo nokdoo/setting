@@ -10,6 +10,6 @@ sudo apt-get update && sudo apt-get install tlp tlp-rdw
 sudo tlp start
 
 #mouse 3finger
-sudo add-apt-repository ppa:atareao/atareao
-sudo apt-get update
-sudo apt-get install touchpad-indicator
+
+#unity(ui controller) conf program
+sudo apt-get install compiz-plugins compizconfig-settings-manager

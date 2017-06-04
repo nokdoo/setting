@@ -1,4 +1,4 @@
-sudo apt-get install uim-byeoru
+sudo apt-get install uim uim-byeoru
 
 super -> language support -> keyboard input method system : uim 으로 변경
 
