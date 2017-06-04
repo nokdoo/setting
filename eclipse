@@ -1,7 +1,10 @@
-홈페이지에서 받은 인스톨러로 EE버전 대충 설치
+tar xvzf eclipse*
 
-sudo vi /etc/profile
+sudo mv -r eclipse /opt/
 
-PATH에다가 :붙이고 이클립스 싱핼파일의 절대경로 추가
-잘 모르겠으면 자바 환경변수 참고
-실행파일 경로를 지정해주는 것뿐임
+sudo vi /usr/bin/eclipse
+	#!/bin/sh
+	export ECLIPSE_HOME=/opt/eclipse
+	$ECLIPSE_HOME/eclipse $*
+
+sudo chmod 755 /usr/bin/eclipse

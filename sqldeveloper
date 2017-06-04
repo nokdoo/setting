@@ -1,3 +1,5 @@
+잘 안되면 유튜브 19분짜리 영상보도록...
+
 홈페이지에서 other platform으로 다운로드
 
 unzip sql*.zip
@@ -8,12 +10,13 @@ cd /opt/sqldeveloper
 
 chmod +x sqldeveloper.sh
 
-sudo ln -s /opt/sqldeveloper.sh /usr/local/bin/sqldeveloper
+sudo ln -s /opt/sqldeveloper/sqldeveloper.sh /usr/local/bin/sqldeveloper
 
-sudo sqldeveloper.sh
+sudo vi /opt/sqldeveloper/sqldeveloper.sh
 모두 주석 처리하고 아래 붙여넣기
 unset -v GNOME_DESKTOP_SESSION_ID
 cd /opt/sqldeveloper/sqldeveloper/bin && bash sqldeveloper $*
 저장
 
-
+oracle_home밑에 client64/network/admin 생성수 tnsnames.ora파일 이동시키기
+sqldeveloper 실행후 tools -> preferences -> database -> advanced -> tns경로 지정
