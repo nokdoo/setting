@@ -1,0 +1,12 @@
+#apt-get 최신화
+sudo apt-get update && sudo apt-get upgrade -y
+
+#gcc, gcc++, 디버깅도구, vim
+sudo apt-get install gcc g++ gdb vim
+
+#노트북 배터리 관리 세 개 모두 실행
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get update && sudo apt-get install tlp tlp-rdw
+sudo tlp start
+
+

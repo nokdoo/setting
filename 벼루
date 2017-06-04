@@ -1,0 +1,13 @@
+sudo apt-get install uim-byeoru
+
+super -> language support -> keyboard input method system : uim 으로 변경
+
+super -> input method -> (
+				global setting -> specify defual IM - checked
+						  Default input method - Byeoru
+						  enabled input methods - "Byerou"
+	           	 )
+
+재부팅
+
+	

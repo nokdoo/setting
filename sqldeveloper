@@ -1,0 +1,19 @@
+홈페이지에서 other platform으로 다운로드
+
+unzip sql*.zip
+
+sudo mv -r sqldeveloper/ /opt
+
+cd /opt/sqldeveloper
+
+chmod +x sqldeveloper.sh
+
+sudo ln -s /opt/sqldeveloper.sh /usr/local/bin/sqldeveloper
+
+sudo sqldeveloper.sh
+모두 주석 처리하고 아래 붙여넣기
+unset -v GNOME_DESKTOP_SESSION_ID
+cd /opt/sqldeveloper/sqldeveloper/bin && bash sqldeveloper $*
+저장
+
+

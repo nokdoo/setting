@@ -1,0 +1,5 @@
+터치패드 
+grep -E -i 'synap|alps|etps' /proc/bus/input/devices
+
+와이파이
+lspci  | grep Network

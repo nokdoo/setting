@@ -1,0 +1,5 @@
+tar xvfJ node*.tar.xz
+
+sudo cp -r node-*/{bin,include,lib,share} /usr/
+
+

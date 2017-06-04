@@ -1,0 +1,25 @@
+sudo apt-get install alien
+
+sudo alien -i oracle-instantclient12.1-basic-12.1.0.1.0-1.x86_64.rpm
+
+sudo alien -i oracle-instantclient12.1-sqlplus-12.1.0.1.0-1.x86_64.rpm
+
+sudo alien -i oracle-instantclient12.1-devel-12.1.0.1.0-1.x86_64.rpm
+
+sudo alien -i oracle-instantclient12.1-tools-12.1.0.1.0-1.x86_64.rpm
+
+export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib/${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+
+sudo vi /etc/ld.so.conf.d/oracle.conf && sudo chmod o+r /etc/ld.so.conf.d/oracle.conf
+    /usr/lib/oracle/12.1/client64/lib/
+    저장
+sudo ldconfig
+
+sudo apt-get install libaio1
+
+
+오라클 홈 설정 - tnsnames.ora 위치 잡을때 필요
+sudo sudo vi /etc/profile.d/oracle.sh && sudo chmod o+r /etc/profile.d/oracle.sh 
+(그냥 /etc/profile에 넣으면 안되나...?)
+export ORACLE_HOME=/usr/lib/oracle/12.1/client64
+
