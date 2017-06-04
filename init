@@ -10,6 +10,12 @@ sudo apt-get update && sudo apt-get install tlp tlp-rdw
 sudo tlp start
 
 #mouse 3finger
+vi ~/touchpad_settings.sh
+  synclient TapButton2=2 - 입력
+chmod +x ~/touchpad_settings.sh
+gsettings set org.gnome.settings-daemon.peripherals.input-devices hotplug-command "/home/nokdoo/touchpad_settings.sh"
+
+
 
 #unity(ui controller) conf program
 sudo apt-get install compiz-plugins compizconfig-settings-manager
