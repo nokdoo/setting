@@ -1,0 +1,22 @@
+tar.gz파일 다운로드
+압축 풀고 경로 지정
+/usr/local/apache-tomcat-8.5.16
+
+vi /etc/profile $CATALINA_HOME=/usr/local/apache-tomcat-8.5.16/
+
+cd /usr/bin
+
+vi startup.sh
+	#!/bin/sh
+	$CATALINA_HOME/bin/startup.sh $*
+
+chmod 755 startup.sh
+
+
+vi shutdown.sh
+	#!/bin/sh
+	$CATALINA_HOME/bin/shutdown.sh $*
+
+chmod 755 shutdown.sh
+
+source /etc/profile
