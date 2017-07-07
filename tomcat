@@ -3,6 +3,7 @@ tar.gz파일 다운로드
 /usr/local/apache-tomcat-8.5.16
 
 vi /etc/profile $CATALINA_HOME=/usr/local/apache-tomcat-8.5.16/
+PATH에 추가
 source /etc/profile
 
 cd /usr/bin
