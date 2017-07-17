@@ -1,0 +1,32 @@
+tar -zxvf ...
+cd ...
+
+	#최신버전의 APR과 APR-Util을 받는다
+	apache apr검색하고 apr, apr-util다운로드
+	
+	압축 풀고 각각 apr, apr-util이라는 디렉토리 이름으로 
+	아파티 디렉토리 httpd.../srclib/밑에 생성(복사)
+
+	각각 디렉토리로 들어가서 
+	./configure
+	make
+	sudo make install
+
+	./configure --with-apr=/usr/local/apr
+	make
+	sudo make install
+
+#다시 아파치 설치 폴더로 되돌아와서
+./configure --prefix=PREFIXi
+#--prefix=PREFIX PREFIX는 설치될 장소. 없다면 /usr/local/apache2로 설치됨, 여기에서는 ./configure만 입력
+#안되면 --with-included-apr를 옵션에 추가 위에 복사한 apr로 실행한다는 의미인듯
+	
+	#PCRE가 없다네
+	http://pcre.org 
+	pcre, pcre2 두 개가 있는데 pcre만 설치함
+	압축풀고
+	./configure
+
+make
+
+sudo make install
