@@ -1,0 +1,12 @@
+#mint 18.x버전에 해당 - 다른 리눅스 버전에서 설치하게 되면 사이트 문서를 보며 설치
+
+#If your system is 64 bit, enable 32 bit architecture (if you haven't already): 
+sudo dpkg --add-architecture i386 
+
+wget -nc https://dl.winehq.org/wine-builds/Release.key
+sudo apt-key add Release.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+
+sudo apt-get update
+
+sudo apt-get install --install-recommends winehq-stable
