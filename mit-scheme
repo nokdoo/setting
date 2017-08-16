@@ -1,0 +1,7 @@
+다운로드
+tar -zxvf mit*
+cd mit*
+cd src
+./configure
+sudo make compile-microcode
+sudo make install
