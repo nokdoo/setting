@@ -22,8 +22,14 @@ set title               " 제목을 표시
 "set wmnu           " tab 자동완성시 가능한 목록을 보여줌
 syntax on " 문법 하이라이트 킴"
 
+"폴딩
+set foldmethod=marker
+set foldmarker={,}
+
+
 "자연스러운 위아래 커서이동
 nnoremap j gj
 nnoremap <down> gj
 nnoremap k gk
 nnoremap <up> gk
+
