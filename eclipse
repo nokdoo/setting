@@ -8,3 +8,9 @@ sudo vi /usr/bin/eclipse
 	$ECLIPSE_HOME/eclipse $*
 
 sudo chmod 755 /usr/bin/eclipse
+
+
+#	F3으로 class파일 소스보기 +
+	class파일에 디버깅하기(실제로는 .java파일과 .class파일이 같이 있고 .java파일을 이용하는거임)
+window -> preferences -> java -> installed jre -> search -> jdk폴더 선택(하위의 jre자동으로 잡아줌) -> 생성된 jre를 체크
+									installed jre 하위의 execution environments -> javaSe-1.8(java8 기준) 위에서 체크한 jre를 체크
