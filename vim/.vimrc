@@ -33,3 +33,8 @@ nnoremap <down> gj
 nnoremap k gk
 nnoremap <up> gk
 
+
+hi markdownItalic cterm=italic ctermfg=lightmagenta
+hi markdownBold cterm=bold ctermfg=lightmagenta
+hi markdownBoldItalic cterm=bold,italic ctermfg=lightmagenta
+hi markdownCode ctermbg=lightgreen
