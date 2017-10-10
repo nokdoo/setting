@@ -23,8 +23,8 @@ set title               " 제목을 표시
 syntax on " 문법 하이라이트 킴"
 
 "폴딩
-set foldmethod=marker
-set foldmarker={,}
+"set foldmethod=marker
+"set foldmarker={,}
 
 
 "자연스러운 위아래 커서이동
