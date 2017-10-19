@@ -1,0 +1,19 @@
+
+
+#데이터베이스 demo 생성
+create database demo;
+
+show databases;
+#demo가 보임
+
+#demo제거
+drop database demo;
+
+create user 'username'@'localhost' identified by '1234';
+#localhost 대신에 % 를 사용해야 다른 컴퓨터에서 접속 가능.
+
+#권한부여
+grant all privileges on demo.* to username@'%';
+
+#적용
+flush privileges;
