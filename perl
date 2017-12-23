@@ -1,3 +1,10 @@
+#리눅스 설치 후 최신 perl 설치
+#소스를 이용해서 설치하면 기존 버전을 대체하더라
+sh Configure -de
+make
+make test
+make install
+
 #cpanminus가 설치돼있어야 함 (cpanm)
 
 #펄 최신상태 유지
