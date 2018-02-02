@@ -1,0 +1,6 @@
+/usr/share/bash-completion/completions/cc
+의 
+complete -F _gcc gcc g++ g77 gcj gpc && 부분에
+
+complete -F _gcc gcc g++ g77 gcj gpc cc && 처럼 cc를 추가하면
+cc에도 자동완성이 추가됨

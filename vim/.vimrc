@@ -26,6 +26,9 @@ syntax on " 문법 하이라이트 킴"
 "set foldmethod=marker
 "set foldmarker={,}
 
+"omni - <C-x> - <C-o>
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 "자연스러운 위아래 커서이동
 nnoremap j gj
