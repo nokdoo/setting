@@ -10,7 +10,7 @@ set tabstop=4         " tab을 4칸으로
 set hlsearch         " 검색시 하이라이트(색상 강조)
 "set expandtab       " tab 대신 띄어쓰기로
 set background=dark  " 검정배경을 사용할 때, (이 색상에 맞춰 문법 하이라이트 색상이 달라집니다.)
-set nocompatible   " 방향키로 이동가능
+"set nocompatible   " 방향키로 이동가능
 "set fileencodings=utf-8,euc-kr    " 파일인코딩 형식 지정
 set bs=indent,eol,start    " backspace 키 사용 가능
 set history=50    " 명령어에 대한 히스토리를 1000개까지
@@ -21,6 +21,7 @@ set title               " 제목을 표시
 "set nowrap         " 자동 줄바꿈 하지 않음
 "set wmnu           " tab 자동완성시 가능한 목록을 보여줌
 syntax on " 문법 하이라이트 킴"
+set formatoptions-=cro " 주석(#과 같은)을 입력하고 다음줄로 넘어오면 줄 맨 앞에 #가 붙는 것을 차단
 
 "폴딩
 "set foldmethod=marker
@@ -41,3 +42,8 @@ hi markdownItalic cterm=italic ctermfg=lightmagenta
 hi markdownBold cterm=bold ctermfg=lightmagenta
 hi markdownBoldItalic cterm=bold,italic ctermfg=lightmagenta
 hi markdownCode ctermbg=lightgreen
+
+"ctags
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR> "tab으로 열기
+map <C-\>l :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\>k :sp <CR>:exec("tag ".expand("<cword>"))<CR>
