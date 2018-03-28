@@ -22,6 +22,7 @@ set title               " 제목을 표시
 "set wmnu           " tab 자동완성시 가능한 목록을 보여줌
 syntax on " 문법 하이라이트 킴"
 set formatoptions-=cro " 주석(#과 같은)을 입력하고 다음줄로 넘어오면 줄 맨 앞에 #가 붙는 것을 차단
+set paste           " 줄 변경시 #이 자동으로 입력되는 것을 막음
 
 "폴딩
 "set foldmethod=marker
@@ -45,5 +46,20 @@ hi markdownCode ctermbg=lightgreen
 
 "ctags
 "map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR> "tab으로 열기
-map <C-\>l :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\>l :vsp <CR>:exec("tag ".expand("<cword>"))<CR><C-W>r
+map <C-\>h :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-\>k :sp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\>j :sp <CR>:exec("tag ".expand("<cword>"))<CR><C-W>r
+
+
+"mojo
+"Configurations variables:
+
+    :let mojo_highlight_data = 1
+"Highlight embedded Perl code in __DATA__ sections of your Perl files.
+
+    :let mojo_disable_html = 1
+"Don't highlight html inside __DATA__ templates - Perl code only.
+
+    :let mojo_no_helpers = 1
+"Don't highlight default and tag helpers.
