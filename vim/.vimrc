@@ -1,5 +1,6 @@
 "파일 위치 : ~/.vimrc
 
+"자연스러운 위아래 커서이동
 set number            " line 표시를 해줍니다.
 set ai                    " auto indent
 set si					" smart indent
@@ -21,29 +22,20 @@ set title               " 제목을 표시
 "set nowrap         " 자동 줄바꿈 하지 않음
 "set wmnu           " tab 자동완성시 가능한 목록을 보여줌
 syntax on " 문법 하이라이트 킴"
-
-
-" 주석(#과 같은)을 입력하고 다음줄로 넘어오면 줄 맨 앞에 #가 붙는 것을 차단
-" set fo? 를 통해 현재 fo를 확인.
-" verbose set fo? 를 통해 fo를 최종적으로 적용한 파일을 찾음
-" setlocal fo+=...를 찾아 수정.
-" 왜 이렇게 해야하지?
+set scrolloff=8 "search 결과의 위치를 화면 아래에서 8만큼 띄움
 
 
 "omni - <C-x> - <C-o>
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-"자연스러운 위아래 커서이동
-nnoremap j gj
-nnoremap <down> gj
-nnoremap k gk
-nnoremap <up> gk
 
+"markdown 하이라이트
 hi markdownItalic cterm=italic ctermfg=lightmagenta
 hi markdownBold cterm=bold ctermfg=lightmagenta
 hi markdownBoldItalic cterm=bold,italic ctermfg=lightmagenta
 hi markdownCode ctermbg=lightgreen
+
 
 "ctags
 "map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR> "tab으로 열기
@@ -52,7 +44,8 @@ map <C-\>h :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-\>k :sp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-\>j :sp <CR>:exec("tag ".expand("<cword>"))<CR><C-W>r
 
-"mojo
+
+"mojo 하이라이트
 "Configurations variables:
     :let mojo_highlight_data = 1
 	"Highlight embedded Perl code in __DATA__ sections of your Perl files.
@@ -62,3 +55,9 @@ map <C-\>j :sp <CR>:exec("tag ".expand("<cword>"))<CR><C-W>r
 
 "   :let mojo_no_helpers = 1
 	"Don't highlight default and tag helpers.
+
+
+"복붙기능 - xclip 필요
+"vmap <C-c> : '<,'>w! ~/xclip \| !xclip -sel clip < ~/xclip <ENTER> <ENTER>
+"set clipboard=unnamedplus - 아래를 쓰려면 필요하다는데 없어도 되더라
+vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>

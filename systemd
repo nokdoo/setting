@@ -1,0 +1,6 @@
+1. 서비스 파일 만들기
+/etc/systemd/system/[name].service
+
+2. 적용, 실행
+systemctl enable [name]
+systemctl start [name]

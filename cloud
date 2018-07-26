@@ -30,4 +30,15 @@ make
 make test
 make install
 
-4.
+4. vsftpd
+소스 다운
+make
+
+useradd nobody "기본 설정
+
+mkdir /usr/share/empty "기본 설정
+
+"anonymous를 위한 계정
+useradd ftp
+mkdir /var/ftp
+
