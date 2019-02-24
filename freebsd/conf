@@ -1,0 +1,2 @@
+/etc/rc.conf
+allscreens_kbdflags="-b quiet.off"
