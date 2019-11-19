@@ -17,3 +17,8 @@ grant all privileges on demo.* to username@'%';
 
 #적용
 flush privileges;
+
+#create table schema.name 을 쓰지 않고
+#create table name 을 쓰는 방법
+use schema;
+#를 치면 스키마가 이동한다. 여기서 말하는 스키마는 위에서 생성한 demo 와 같음
